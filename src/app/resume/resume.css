@@ -1,0 +1,27 @@
+@media print {
+  @page {
+    margin: 0.6in;
+    size: A4;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  .resume-actions {
+    display: none !important;
+  }
+}
+
+.resume-heading {
+  margin-bottom: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #4338ca;
+}
+
+.resume-section {
+  break-inside: avoid;
+}
