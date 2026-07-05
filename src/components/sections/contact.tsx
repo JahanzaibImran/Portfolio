@@ -20,9 +20,10 @@ export function Contact() {
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
     setStatus("loading");
     setError("");
-    const fd = new FormData(e.currentTarget);
+    const fd = new FormData(form);
 
     try {
       const res = await fetch("/api/contact", {
@@ -36,8 +37,8 @@ export function Contact() {
       });
       const data = (await res.json()) as { error?: string };
       if (!res.ok) throw new Error(data.error ?? "Failed");
+      form.reset();
       setStatus("success");
-      e.currentTarget.reset();
     } catch (err) {
       setStatus("error");
       setError(err instanceof Error ? err.message : "Failed to send");
