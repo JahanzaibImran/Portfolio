@@ -17,8 +17,8 @@ export function Projects() {
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <SectionHeading
           label="Case Studies"
-          title="Products shipped to production"
-          description="Premium case studies — problem, architecture, impact, and metrics."
+          title="Production products I've shipped"
+          description="Real client work across AI, SaaS, backends, and serverless platforms — problem, architecture, impact, and live demos."
         />
 
         <div className="mb-10 flex flex-wrap gap-2">
